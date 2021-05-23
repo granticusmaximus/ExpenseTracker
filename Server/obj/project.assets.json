@@ -110,6 +110,32 @@
           "lib/netstandard2.0/IdentityServer4.Storage.dll": {}
         }
       },
+      "MatBlazor/2.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.10",
+          "Microsoft.AspNetCore.Components.Web": "3.1.10"
+        },
+        "compile": {
+          "lib/netstandard2.1/MatBlazor.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/MatBlazor.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/MatBlazor.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/MatBlazor.props": {}
+        }
+      },
       "Microsoft.AspNetCore.ApiAuthorization.IdentityServer/5.0.6": {
         "type": "package",
         "dependencies": {
@@ -1966,6 +1992,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "ExpenseTracker.Shared": "1.0.0",
+          "MatBlazor": "2.8.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "5.0.6",
           "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "5.0.6",
           "Microsoft.Extensions.Http": "5.0.0",
@@ -2117,6 +2144,27 @@
         "lib/netstandard2.0/IdentityServer4.Storage.dll",
         "lib/netstandard2.0/IdentityServer4.Storage.pdb",
         "lib/netstandard2.0/IdentityServer4.Storage.xml"
+      ]
+    },
+    "MatBlazor/2.8.0": {
+      "sha512": "NAbkrLR6YdEXNtQQreJOAdZEqTBeG6wXiTxs9ItHBCLnoCouX//VELHakDXcMtK27QzmeB8uGRwWIkglvhpKLg==",
+      "type": "package",
+      "path": "matblazor/2.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MatBlazor.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/MatBlazor.props",
+        "buildTransitive/MatBlazor.props",
+        "content/Properties/launchSettings.json",
+        "contentFiles/any/netstandard2.1/Properties/launchSettings.json",
+        "lib/netstandard2.1/MatBlazor.dll",
+        "lib/netstandard2.1/MatBlazor.xml",
+        "matblazor.2.8.0.nupkg.sha512",
+        "matblazor.nuspec",
+        "staticwebassets/dist/matBlazor.css",
+        "staticwebassets/dist/matBlazor.js"
       ]
     },
     "Microsoft.AspNetCore.ApiAuthorization.IdentityServer/5.0.6": {

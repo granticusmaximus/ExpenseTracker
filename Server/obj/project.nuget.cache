@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1n5axFMNGH3LV9KowWgQ6djI9c4/Gl6H3Ci0+Rq9y5tjSBSS5P3SHlYSGcVBTXHObpfOBNp6qbKVm2SxIzPHkA==",
+  "dgSpecHash": "oOzK0nQjTWecxwbngGmsK4afRio5TGQ4oLmRGkEVwHumACDdr1NPMBj+f5L742vdE07w5Pcuj097Cidcl7tlUw==",
   "success": true,
   "projectFilePath": "\\\\Mac\\Home\\Desktop\\Dev\\Blazor\\ExpenseTracker\\ExpenseTracker\\Server\\ExpenseTracker.Server.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\grantwatson\\.nuget\\packages\\identityserver4.entityframework\\4.1.0\\identityserver4.entityframework.4.1.0.nupkg.sha512",
     "C:\\Users\\grantwatson\\.nuget\\packages\\identityserver4.entityframework.storage\\4.1.0\\identityserver4.entityframework.storage.4.1.0.nupkg.sha512",
     "C:\\Users\\grantwatson\\.nuget\\packages\\identityserver4.storage\\4.1.0\\identityserver4.storage.4.1.0.nupkg.sha512",
+    "C:\\Users\\grantwatson\\.nuget\\packages\\matblazor\\2.8.0\\matblazor.2.8.0.nupkg.sha512",
     "C:\\Users\\grantwatson\\.nuget\\packages\\microsoft.aspnetcore.apiauthorization.identityserver\\5.0.6\\microsoft.aspnetcore.apiauthorization.identityserver.5.0.6.nupkg.sha512",
     "C:\\Users\\grantwatson\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.6\\microsoft.aspnetcore.authentication.jwtbearer.5.0.6.nupkg.sha512",
     "C:\\Users\\grantwatson\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\3.1.0\\microsoft.aspnetcore.authentication.openidconnect.3.1.0.nupkg.sha512",

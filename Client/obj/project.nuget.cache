@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nM9ozil6V1vlnvV3dQ8t+jiKDOGO+7jETJZJqmTJsrG8wkECA65X3YiHqHprf/AzVMn/eGGCPlcqw6agGEBJ1w==",
+  "dgSpecHash": "Ap96QDEGJyYquo+MkfIWPKWarZtlEpCdDyOwzos5PDTCKR8J+Q32PzPcH0pkmIFQpQ1y48j1D7O6xVAxq1sS8Q==",
   "success": true,
   "projectFilePath": "\\\\Mac\\Home\\Desktop\\Dev\\Blazor\\ExpenseTracker\\ExpenseTracker\\Client\\ExpenseTracker.Client.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\grantwatson\\.nuget\\packages\\matblazor\\2.8.0\\matblazor.2.8.0.nupkg.sha512",
     "C:\\Users\\grantwatson\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.6\\microsoft.aspnetcore.authorization.5.0.6.nupkg.sha512",
     "C:\\Users\\grantwatson\\.nuget\\packages\\microsoft.aspnetcore.components\\5.0.6\\microsoft.aspnetcore.components.5.0.6.nupkg.sha512",
     "C:\\Users\\grantwatson\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\5.0.6\\microsoft.aspnetcore.components.analyzers.5.0.6.nupkg.sha512",

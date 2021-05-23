@@ -2,6 +2,32 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "MatBlazor/2.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.10",
+          "Microsoft.AspNetCore.Components.Web": "3.1.10"
+        },
+        "compile": {
+          "lib/netstandard2.1/MatBlazor.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/MatBlazor.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.1/Properties/launchSettings.json": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/MatBlazor.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/MatBlazor.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/5.0.6": {
         "type": "package",
         "dependencies": {
@@ -365,6 +391,32 @@
       }
     },
     "net5.0/browser-wasm": {
+      "MatBlazor/2.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.10",
+          "Microsoft.AspNetCore.Components.Web": "3.1.10"
+        },
+        "compile": {
+          "lib/netstandard2.1/MatBlazor.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/MatBlazor.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.1/Properties/launchSettings.json": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/MatBlazor.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/MatBlazor.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/5.0.6": {
         "type": "package",
         "dependencies": {
@@ -729,6 +781,27 @@
     }
   },
   "libraries": {
+    "MatBlazor/2.8.0": {
+      "sha512": "NAbkrLR6YdEXNtQQreJOAdZEqTBeG6wXiTxs9ItHBCLnoCouX//VELHakDXcMtK27QzmeB8uGRwWIkglvhpKLg==",
+      "type": "package",
+      "path": "matblazor/2.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MatBlazor.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/MatBlazor.props",
+        "buildTransitive/MatBlazor.props",
+        "content/Properties/launchSettings.json",
+        "contentFiles/any/netstandard2.1/Properties/launchSettings.json",
+        "lib/netstandard2.1/MatBlazor.dll",
+        "lib/netstandard2.1/MatBlazor.xml",
+        "matblazor.2.8.0.nupkg.sha512",
+        "matblazor.nuspec",
+        "staticwebassets/dist/matBlazor.css",
+        "staticwebassets/dist/matBlazor.js"
+      ]
+    },
     "Microsoft.AspNetCore.Authorization/5.0.6": {
       "sha512": "TNFB3i5mak/8XgvPjHiWdQAD7B1fsqY8NJmryV6rStJknAA0+upiJrCqK2cY7L2WMviIoxGt6SWHQmq5qmv4HQ==",
       "type": "package",
@@ -1314,6 +1387,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "ExpenseTracker.Shared >= 1.0.0",
+      "MatBlazor >= 2.8.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 5.0.6",
       "Microsoft.AspNetCore.Components.WebAssembly.Authentication >= 5.0.6",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 5.0.6",
@@ -1374,6 +1448,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "MatBlazor": {
+            "target": "Package",
+            "version": "[2.8.0, )"
+          },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
             "version": "[5.0.6, )"

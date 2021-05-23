@@ -5,10 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <SupportedPlatform Include="browser" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.6" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <SupportedPlatform Include="browser" />
   </ItemGroup>
 </Project>

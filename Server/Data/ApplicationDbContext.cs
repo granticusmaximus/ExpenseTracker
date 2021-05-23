@@ -1,15 +1,8 @@
-﻿using ExpenseTracker.Server.Models;
-
+﻿using ExpenseTracker.Shared.Models;
 using IdentityServer4.EntityFramework.Options;
-
 using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ExpenseTracker.Server.Data
 {
@@ -20,5 +13,10 @@ namespace ExpenseTracker.Server.Data
             IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
         {
         }
+
+        #region DbSet
+        public DbSet<Expense> Expenses { get; set; }
+        public DbSet<Income> Income { get; set; }
+        #endregion
     }
 }

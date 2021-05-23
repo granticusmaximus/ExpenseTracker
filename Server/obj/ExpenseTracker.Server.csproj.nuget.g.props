@@ -24,6 +24,7 @@
     <Import Project="$(NuGetPackageRoot)matblazor\2.8.0\buildTransitive\MatBlazor.props" Condition="Exists('$(NuGetPackageRoot)matblazor\2.8.0\buildTransitive\MatBlazor.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\grantwatson\.nuget\packages\microsoft.codeanalysis.analyzers\3.0.0</PkgMicrosoft_CodeAnalysis_Analyzers>
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\grantwatson\.nuget\packages\microsoft.entityframeworkcore.tools\5.0.6</PkgMicrosoft_EntityFrameworkCore_Tools>
     <PkgMicrosoft_AspNetCore_Components_WebAssembly_Server Condition=" '$(PkgMicrosoft_AspNetCore_Components_WebAssembly_Server)' == '' ">C:\Users\grantwatson\.nuget\packages\microsoft.aspnetcore.components.webassembly.server\5.0.6</PkgMicrosoft_AspNetCore_Components_WebAssembly_Server>
   </PropertyGroup>

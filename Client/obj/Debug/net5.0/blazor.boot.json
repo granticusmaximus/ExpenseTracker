@@ -215,7 +215,6 @@
     },
     "lazyAssembly": null,
     "pdb": {
-      "ExpenseTracker.Shared.pdb": "sha256-qSYClWM4oqlyvkcANIGCT6QYVwhOTe0kSIYj6WKY7LE=",
       "ExpenseTracker.Client.pdb": "sha256-+ew4dGclNY\/qT601lx0yQprvUB4F31OvEenK9SbA+Vw="
     },
     "runtime": {

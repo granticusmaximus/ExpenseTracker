@@ -13,12 +13,16 @@
       "url": "_content\/MatBlazor\/dist\/matBlazor.js"
     },
     {
-      "hash": "sha256-NoPVsHhlUqrcUNUC2Xt8IkttNk3P3NyDNSsoS6\/r460=",
+      "hash": "sha256-E4Sr70aeIhoSA4VVztcPg4uHrR9pMN8r\/NbL2ocLQww=",
       "url": "_framework\/blazor.boot.json"
     },
     {
       "hash": "sha256-w+DEscEPLXa2QwjGoRMEy1XDOSGPM8O3p9QFXlTiea4=",
       "url": "_framework\/MatBlazor.dll"
+    },
+    {
+      "hash": "sha256-bZRtKyPkMDcZRcarc8C1tE173hgXd2RbtOyv8pQ8KF8=",
+      "url": "_framework\/Microsoft.AspNet.Identity.Core.dll"
     },
     {
       "hash": "sha256-yk95Qg9j2YvS1MIGFzyQG2eMJl4wtdJvwb5lLx1Qcac=",
@@ -853,19 +857,19 @@
       "url": "_framework\/dotnet.5.0.6.js"
     },
     {
-      "hash": "sha256-SqrURtpwd2wGxi3RaGw6le5NHLdNzPDbYv48F+VvD3c=",
+      "hash": "sha256-cr4Z5jqff\/JBND05GoUFb6g2nfhWn4pwa6MS72UcIAk=",
       "url": "_framework\/ExpenseTracker.Shared.dll"
     },
     {
-      "hash": "sha256-kVA7+CeGiLByn7sekuaJoUjNiR2mZSCN1egn0Y6dJ10=",
+      "hash": "sha256-qSYClWM4oqlyvkcANIGCT6QYVwhOTe0kSIYj6WKY7LE=",
       "url": "_framework\/ExpenseTracker.Shared.pdb"
     },
     {
-      "hash": "sha256-dggKSZ6RBU3xpF0JIivCi7WlreHZaZqComHpya8HpfQ=",
+      "hash": "sha256-COd\/scP8Ff6S2ANqeRYSmtoF1HBhZrFcbND5Vl8g6xA=",
       "url": "_framework\/ExpenseTracker.Client.dll"
     },
     {
-      "hash": "sha256-gH7BO37p73htuGEUhgFzAZljLF6L2wJhuIpphgA4pB8=",
+      "hash": "sha256-+ew4dGclNY\/qT601lx0yQprvUB4F31OvEenK9SbA+Vw=",
       "url": "_framework\/ExpenseTracker.Client.pdb"
     },
     {
@@ -875,6 +879,10 @@
     {
       "hash": "sha256-fCLeAmhsjpoqG0jsER48aJ1BGzlAv9\/OfpHBqV7vOdc=",
       "url": "_framework\/MatBlazor.dll.gz"
+    },
+    {
+      "hash": "sha256-fuLD31JyNybjm0W9jYtge2cIhylJQU2Bly3Wn2bdpqE=",
+      "url": "_framework\/Microsoft.AspNet.Identity.Core.dll.gz"
     },
     {
       "hash": "sha256-Jaheo9dpveubY5XYKAASvNNifp8SwkYTsJihaLBJflQ=",
@@ -1709,11 +1717,11 @@
       "url": "_framework\/dotnet.5.0.6.js.gz"
     },
     {
-      "hash": "sha256-ynWe8xuhH8qjtxdlWRQ1+Yx6osnHJjY1vMJVmsDBtag=",
+      "hash": "sha256-4DTrdID3qjGSTqSQn0729Qn8SGtMDkNqJ+p4+1ZXZ18=",
       "url": "_framework\/ExpenseTracker.Shared.dll.gz"
     },
     {
-      "hash": "sha256-8aM9R9K90X6h+KPDW4OzrEh071mAs7dvAQxjBxAZQAc=",
+      "hash": "sha256-3gbA1vj1Gb2k+QW5gNpT1ZLv78VScknVoTA0c+KWRFg=",
       "url": "css\/app.css"
     },
     {
@@ -1769,7 +1777,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-m8518ij6ZLF1JStkElmlSoPyuEhjkmqZVEYEpWw5I8o=",
+      "hash": "sha256-sgafM3xZYOV3HcsICADlx5CJMMzk1aFfjbODxhKG9As=",
       "url": "index.html"
     },
     {
@@ -1777,13 +1785,13 @@
       "url": "manifest.json"
     },
     {
-      "hash": "sha256-YM9R2FVegeXR1Jn97CfYPouSolDQhNTyd8w3C5VfreA=",
+      "hash": "sha256-q\/WcVbrWcWYHMO2tR8kz3cG+px1gljAg\/SXd5Jt7UIA=",
       "url": "ExpenseTracker.Client.styles.css"
     },
     {
-      "hash": "sha256-38PAd+x1LqMtMPLZn3kN\/+43c\/7IdQAf8paqot9HtZs=",
+      "hash": "sha256-tzN9xnaX6y3ppkqcN6sB3A8FXrxERWfHXSQNu8bfAA4=",
       "url": "ExpenseTracker.Client.bundle.scp.css"
     }
   ],
-  "version": "KKcpRWDl"
+  "version": "+JMvv74D"
 };

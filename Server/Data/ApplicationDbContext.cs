@@ -14,7 +14,7 @@ namespace ExpenseTracker.Server.Data
         {
         }
 
-        #region DbSet
+        #region Entity Models
         public DbSet<Expense> Expenses { get; set; }
         public DbSet<Income> Income { get; set; }
         #endregion

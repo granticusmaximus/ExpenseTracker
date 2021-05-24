@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Ia0Wy2ZxdeNRIBdalCQyDvOBnrDnthZePUWU9nKm2ucGYfueubE5/L84IJERne9kgGPlzDKgkE2KVV1jJjB5Kg==",
+  "dgSpecHash": "561J9bdeZJY/mJppiJKHpgM6QzySUtZijg0cKou0yl1ywy2ZC2Qx4ln14hgdWHYk1CkQzwz+EEcoeJ9U5qj/Sw==",
   "success": true,
   "projectFilePath": "\\\\Mac\\Home\\Desktop\\Dev\\Blazor\\ExpenseTracker\\ExpenseTracker\\Client\\ExpenseTracker.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\grantwatson\\.nuget\\packages\\matblazor\\2.8.0\\matblazor.2.8.0.nupkg.sha512",
+    "C:\\Users\\grantwatson\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
     "C:\\Users\\grantwatson\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.6\\microsoft.aspnetcore.authorization.5.0.6.nupkg.sha512",
     "C:\\Users\\grantwatson\\.nuget\\packages\\microsoft.aspnetcore.components\\5.0.6\\microsoft.aspnetcore.components.5.0.6.nupkg.sha512",
     "C:\\Users\\grantwatson\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\5.0.6\\microsoft.aspnetcore.components.analyzers.5.0.6.nupkg.sha512",
@@ -50,5 +51,16 @@
     "C:\\Users\\grantwatson\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
     "C:\\Users\\grantwatson\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.6\\microsoft.netcore.app.runtime.browser-wasm.5.0.6.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Identity.Core 2.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Identity.Core",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

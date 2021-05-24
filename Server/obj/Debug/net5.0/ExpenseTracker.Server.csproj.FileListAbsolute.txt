@@ -231,3 +231,4 @@
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Server\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Server\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Server\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
+\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Server\bin\Debug\net5.0\Microsoft.AspNet.Identity.Core.dll

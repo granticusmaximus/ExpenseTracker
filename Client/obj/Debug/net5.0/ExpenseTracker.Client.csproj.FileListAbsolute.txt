@@ -441,7 +441,6 @@
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\RazorDeclaration\Shared\LoginDisplay.razor.g.cs
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\RazorDeclaration\Shared\RedirectToLogin.razor.g.cs
-\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\RazorDeclaration\Shared\NavMenu.razor.g.cs
@@ -455,7 +454,6 @@
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\Razor\Shared\LoginDisplay.razor.g.cs
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\Razor\Shared\RedirectToLogin.razor.g.cs
-\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
@@ -682,3 +680,6 @@
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\ExpenseTracker.Client.pdb
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\serviceworkers\wwwroot\service-worker.js
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\service-worker-assets.js
+\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNet.Identity.Core.dll.gz
+\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNet.Identity.Core.dll
+\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\build-gz\JswoQbpi.gz

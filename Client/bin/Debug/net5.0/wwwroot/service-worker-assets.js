@@ -13,7 +13,7 @@
       "url": "_content\/MatBlazor\/dist\/matBlazor.js"
     },
     {
-      "hash": "sha256-E4Sr70aeIhoSA4VVztcPg4uHrR9pMN8r\/NbL2ocLQww=",
+      "hash": "sha256-i7GizxBH25V\/wRXc1SEIfAMaxfWbbusUyNlY825VcsA=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -865,11 +865,11 @@
       "url": "_framework\/ExpenseTracker.Shared.pdb"
     },
     {
-      "hash": "sha256-COd\/scP8Ff6S2ANqeRYSmtoF1HBhZrFcbND5Vl8g6xA=",
+      "hash": "sha256-IpIZtPhM9PGRg+v9VSouvS5aQagCW+vRtsIYcnSDfBM=",
       "url": "_framework\/ExpenseTracker.Client.dll"
     },
     {
-      "hash": "sha256-+ew4dGclNY\/qT601lx0yQprvUB4F31OvEenK9SbA+Vw=",
+      "hash": "sha256-pAk+YRdsvSZgF4XGsW9bdo9iLAfX3fxLOgEV62DuQT4=",
       "url": "_framework\/ExpenseTracker.Client.pdb"
     },
     {
@@ -1793,5 +1793,5 @@
       "url": "ExpenseTracker.Client.bundle.scp.css"
     }
   ],
-  "version": "+JMvv74D"
+  "version": "zb7p1cWs"
 };

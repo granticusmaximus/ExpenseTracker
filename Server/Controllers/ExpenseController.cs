@@ -22,32 +22,32 @@ namespace ExpenseTracker.Server.Controllers
         }
 
         #region Expenses Methods
-        [HttpGet]
+        [HttpGet("GetExpenses")]
         public async Task<List<Expense>> GetAllExpenses()
         {
             return await _dbcontext.Expenses.AsQueryable().ToListAsync();
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("GetSingleExpense/{id}")]
         public async Task<Expense> GetSingleExpense(int id)
         {
             return await _dbcontext.Expenses.FindAsync(id);
         }
-        [HttpPost]
+        [HttpPost("CreateExpense")]
         public async Task CreateExpense([FromBody] Expense expense)
         {
             if (ModelState.IsValid)
                 await _dbcontext.AddAsync(expense);
             await _dbcontext.SaveChangesAsync();
         }
-        [HttpPut]
+        [HttpPut("GetSingleExpense/{id}")]
         public void UpdateExpense([FromBody] Expense expense)
         {
             if (ModelState.IsValid)
                 _dbcontext.Update(expense);
             _dbcontext.SaveChanges();
         }
-        [HttpDelete("delete/{id}")]
+        [HttpDelete("deleteexpense/{id}")]
         public void DeleteExpense(int id)
         {
             var entity = _dbcontext.Expenses.Find(id);
@@ -57,7 +57,7 @@ namespace ExpenseTracker.Server.Controllers
         #endregion
 
         #region Income Methods
-        [HttpGet]
+        [HttpGet("GetIncomes")]
         public async Task<List<Income>> GetAllIncomes()
         {
             return await _dbcontext.Income.AsQueryable().ToListAsync();
@@ -82,7 +82,7 @@ namespace ExpenseTracker.Server.Controllers
                 _dbcontext.Update(income);
             _dbcontext.SaveChanges();
         }
-        [HttpDelete("delete/{id}")]
+        [HttpDelete("deleteincome/{id}")]
         public void DeleteIncome(int id)
         {
             var entity = _dbcontext.Income.Find(id);

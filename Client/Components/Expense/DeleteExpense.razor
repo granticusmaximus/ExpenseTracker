@@ -1,0 +1,47 @@
+﻿@using ExpenseTracker.Shared.Models
+@page "/deleteexpense/{Id}"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+
+<h2>Delete</h2>
+<h3>Are you sure you want to delete student : @expense.Title | @expense.Amount </h3>
+<br />
+<div class="col-md-4">
+    <table class="table">
+        <tr>
+            <td>Id</td>
+            <td>@expense.ID</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>@expense.Title</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>@expense.Amount</td>
+        </tr>
+    </table>
+    <div class="form-group">
+        <input type="submit" value="Delete" @onclick="@(async () => await Delete())" class="btn btn-primary" />
+        <input type="submit" value="Cancel" @onclick="@cancel" class="btn btn-warning" />
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+    Expense expense = new Expense();
+    protected override async Task OnInitializedAsync()
+    {
+        expense = await Http.GetFromJsonAsync<Expense>("/api/Expense/GetSingleExpense/" + Convert.ToInt32(Id));
+    }
+    protected async Task Delete()
+    {
+        await Http.DeleteAsync("api/Expense/deleteexpense/" + Convert.ToInt32(Id));
+        Navigation.NavigateTo("/");
+    }
+    void cancel()
+    {
+        Navigation.NavigateTo("/");
+    }
+}    

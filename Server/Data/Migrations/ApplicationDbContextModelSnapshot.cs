@@ -100,8 +100,8 @@ namespace ExpenseTracker.Server.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Amount")
-                        .HasColumnType("int");
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,4)");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
@@ -123,8 +123,8 @@ namespace ExpenseTracker.Server.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Amount")
-                        .HasColumnType("int");
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,4)");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");

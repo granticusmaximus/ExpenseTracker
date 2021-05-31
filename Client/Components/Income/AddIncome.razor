@@ -1,0 +1,38 @@
+﻿@page "/addincome"
+@inject HttpClient Http
+@using ExpenseTracker.Shared.Models
+@inject NavigationManager Navigation
+
+<h1>Create New Income</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form @onsubmit="@(async () => await CreateIncome())">
+            <div class="form-group">
+                <label for="Title" class="control-label">Title</label>
+                <input for="Title" class="form-control" @bind="@income.Title" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Amount" class="control-label">Amount</label>
+                <input asp-for="Amount" class="form-control" @bind="@income.Amount"/>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <button class="btn btn-warning" @onclick="@cancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@functions {
+    Income income = new Income();
+    protected async Task CreateIncome()
+    {
+        await Http.PostAsJsonAsync("/api/Expense/CreateIncome", income);
+        Navigation.NavigateTo("/");
+    }
+    void cancel()
+    {
+        Navigation.NavigateTo("/");
+    }
+}  

@@ -1,0 +1,48 @@
+﻿@page "/expenses"
+@inject HttpClient Http
+@using ExpenseTracker.Shared.Models
+
+<center>
+    <h1>Expenses</h1>
+    <p>
+        <a href="/addexpense" class="btn btn-outline-success">Create New</a>
+    </p>
+    @if (expenses == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <table class='table'>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var expense in expenses)
+                {
+                    <tr>
+                        <td>@expense.ID</td>
+                        <td>@expense.Title</td>
+                        <td>@expense.Amount</td>
+                        <td>
+                            <a href='/editexpense/@expense.ID'>Edit</a>  |
+                            <a href='/delete/@expense.ID'>Delete</a>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    }
+</center>
+@code {
+    Expense[] expenses;
+    protected override async Task OnInitializedAsync()
+    {
+        expenses = await Http.GetFromJsonAsync<Expense[]>("api/Expense/GetExpenses");
+    }
+}  

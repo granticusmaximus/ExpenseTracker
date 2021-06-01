@@ -1,11 +1,12 @@
 ﻿@page "/incomes"
 @inject HttpClient Http
+@using MatBlazor 
 @using ExpenseTracker.Shared.Models
 
 <center>
     <h1>Incomes</h1>
     <p>
-        <a href="/addincome" class="btn btn-outline-success">Create New</a>
+        <button class="btn btn-outline-success" @onclick="_ => OpenDialog()"><span class="oi oi-clipboard" aria-hidden="true">Add New Income</span></button>
     </p>
     @if (incomes == null)
     {
@@ -38,11 +39,33 @@
             </tbody>
         </table>
     }
+    
 </center>
+<MatDialog @bind-IsOpen="@dialogIsOpen">
+    <MatDialogTitle>Add New Income</MatDialogTitle>
+    <MatDialogContent>
+        <AddIncome />
+    </MatDialogContent>
+    <MatDialogActions>
+        <MatButton OnClick="OkClose">Close</MatButton>
+    </MatDialogActions>
+</MatDialog>
 @code {
     Income[] incomes;
+    bool dialogIsOpen = false;
+
     protected override async Task OnInitializedAsync()
     {
         incomes = await Http.GetFromJsonAsync<Income[]>("api/Expense/GetIncomes");
+    }
+
+    void OpenDialog()
+    {
+        dialogIsOpen = true;
+    }
+
+    void OkClose()
+    {
+        dialogIsOpen = false;
     }
 }  

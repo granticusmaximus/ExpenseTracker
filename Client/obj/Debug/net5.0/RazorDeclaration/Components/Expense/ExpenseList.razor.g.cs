@@ -91,6 +91,13 @@ using ExpenseTracker.Client.Shared;
 #nullable disable
 #nullable restore
 #line 3 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Components\Expense\ExpenseList.razor"
+using MatBlazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Components\Expense\ExpenseList.razor"
 using ExpenseTracker.Shared.Models;
 
 #line default
@@ -105,12 +112,24 @@ using ExpenseTracker.Shared.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 42 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Components\Expense\ExpenseList.razor"
+#line 52 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Components\Expense\ExpenseList.razor"
        
     Expense[] expenses;
+    bool dialogIsOpen = false;
+
     protected override async Task OnInitializedAsync()
     {
         expenses = await Http.GetFromJsonAsync<Expense[]>("api/Expense/GetExpenses");
+    }
+
+    void OpenDialog()
+    {
+        dialogIsOpen = true;
+    }
+
+    void OkClose()
+    {
+        dialogIsOpen = false;
     }
 
 #line default

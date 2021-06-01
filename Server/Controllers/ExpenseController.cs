@@ -63,12 +63,12 @@ namespace ExpenseTracker.Server.Controllers
             return await _dbcontext.Income.AsQueryable().ToListAsync();
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("GetSingleIncome/{id}")]
         public async Task<Income> GetSingleIncome(int id)
         {
             return await _dbcontext.Income.FindAsync(id);
         }
-        [HttpPost]
+        [HttpPost("Createincome")]
         public async Task CreateIncome([FromBody] Income income)
         {
             if (ModelState.IsValid)

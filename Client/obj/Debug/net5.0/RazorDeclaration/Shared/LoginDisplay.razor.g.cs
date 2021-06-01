@@ -104,7 +104,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 19 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Shared\LoginDisplay.razor"
+#line 18 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Shared\LoginDisplay.razor"
       
     private async Task BeginSignOut(MouseEventArgs args)
     {

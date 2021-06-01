@@ -116,7 +116,7 @@ using ExpenseTracker.Shared.Models;
     }
     protected async Task UpdateExpense()
     {
-        await Http.PutAsJsonAsync( "api/Expense/UpdateExpense", expense);
+        await Http.PutAsJsonAsync("api/Expense/UpdateExpense", expense);
         Navigation.NavigateTo("/");
     }
     void cancel()

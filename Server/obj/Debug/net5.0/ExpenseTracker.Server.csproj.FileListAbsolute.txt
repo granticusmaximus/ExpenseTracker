@@ -232,3 +232,5 @@
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Server\obj\Debug\net5.0\ref\ExpenseTracker.Server.dll
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Server\obj\Debug\net5.0\ExpenseTracker.Server.pdb
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Server\obj\Debug\net5.0\ExpenseTracker.Server.genruntimeconfig.cache
+\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Server\bin\Debug\net5.0\System.Net.Http.Formatting.dll
+\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Server\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

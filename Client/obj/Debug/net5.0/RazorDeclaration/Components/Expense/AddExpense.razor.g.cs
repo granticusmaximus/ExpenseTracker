@@ -105,17 +105,13 @@ using ExpenseTracker.Shared.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 27 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Components\Expense\AddExpense.razor"
+#line 28 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Components\Expense\AddExpense.razor"
             
     Expense expense = new Expense();
     protected async Task CreateExpense()
     {
         await Http.PostAsJsonAsync("/api/Expense/CreateExpense", expense);
-        Navigation.NavigateTo("/");
-    }
-    void cancel()
-    {
-        Navigation.NavigateTo("/");
+        StateHasChanged();
     }
 
 #line default

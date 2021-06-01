@@ -211,12 +211,12 @@
       "netstandard.dll": "sha256-B6gmXEMfYgOuaOR1g1cGHLn2kDlZYAah4K2XNUZbTs4=",
       "System.Private.CoreLib.dll": "sha256-XY0bl1U8F\/iSbQzkmIHM8UtE\/R9VntZoy\/kMbvuMjTA=",
       "ExpenseTracker.Shared.dll": "sha256-kuyROOsHBbOhDXZ\/uCeTg3Rvlp53zh3RpslT\/riC4vc=",
-      "ExpenseTracker.Client.dll": "sha256-3Ojrzs2eyy9EXjHzOjXivDNGSgfIO8STBZ7cITtfVt8="
+      "ExpenseTracker.Client.dll": "sha256-e55s6H1W5qVT+9+FDK3Qf99mzo6mEvfsKPxBGrTczeM="
     },
     "lazyAssembly": null,
     "pdb": {
       "ExpenseTracker.Shared.pdb": "sha256-2+K7viPWbv7NECT03AXTcNik7BXtf6226CbHgycRtM0=",
-      "ExpenseTracker.Client.pdb": "sha256-my9sHyGtBUbzfVc6VAq2kwa+6+RFUY1jNXutMT+6GeM="
+      "ExpenseTracker.Client.pdb": "sha256-exP6DVSEm7+9XizYr9XEpsXrQ+wwDKM0U4Q32IexP7Y="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-OEDZp6noMH3AdT8qd0zd7ZXzy2CsPQ+CZeQnYmRoVWo=",

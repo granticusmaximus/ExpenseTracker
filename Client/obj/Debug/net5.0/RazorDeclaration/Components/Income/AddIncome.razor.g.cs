@@ -105,17 +105,13 @@ using ExpenseTracker.Shared.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 27 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Components\Income\AddIncome.razor"
+#line 28 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Components\Income\AddIncome.razor"
             
     Income income = new Income();
     protected async Task CreateIncome()
     {
         await Http.PostAsJsonAsync("/api/Expense/CreateIncome", income);
-        Navigation.NavigateTo("/");
-    }
-    void cancel()
-    {
-        Navigation.NavigateTo("/");
+        StateHasChanged();
     }
 
 #line default

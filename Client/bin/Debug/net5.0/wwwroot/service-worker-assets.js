@@ -13,7 +13,7 @@
       "url": "_content\/MatBlazor\/dist\/matBlazor.js"
     },
     {
-      "hash": "sha256-M5p1ZZP8lZ8MxPJE8aYO8vae4qohwQewhLiyTWT2O9g=",
+      "hash": "sha256-E4Sr70aeIhoSA4VVztcPg4uHrR9pMN8r\/NbL2ocLQww=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -857,19 +857,19 @@
       "url": "_framework\/dotnet.5.0.6.js"
     },
     {
-      "hash": "sha256-kuyROOsHBbOhDXZ\/uCeTg3Rvlp53zh3RpslT\/riC4vc=",
+      "hash": "sha256-cr4Z5jqff\/JBND05GoUFb6g2nfhWn4pwa6MS72UcIAk=",
       "url": "_framework\/ExpenseTracker.Shared.dll"
     },
     {
-      "hash": "sha256-2+K7viPWbv7NECT03AXTcNik7BXtf6226CbHgycRtM0=",
+      "hash": "sha256-qSYClWM4oqlyvkcANIGCT6QYVwhOTe0kSIYj6WKY7LE=",
       "url": "_framework\/ExpenseTracker.Shared.pdb"
     },
     {
-      "hash": "sha256-e55s6H1W5qVT+9+FDK3Qf99mzo6mEvfsKPxBGrTczeM=",
+      "hash": "sha256-COd\/scP8Ff6S2ANqeRYSmtoF1HBhZrFcbND5Vl8g6xA=",
       "url": "_framework\/ExpenseTracker.Client.dll"
     },
     {
-      "hash": "sha256-exP6DVSEm7+9XizYr9XEpsXrQ+wwDKM0U4Q32IexP7Y=",
+      "hash": "sha256-+ew4dGclNY\/qT601lx0yQprvUB4F31OvEenK9SbA+Vw=",
       "url": "_framework\/ExpenseTracker.Client.pdb"
     },
     {
@@ -1717,7 +1717,7 @@
       "url": "_framework\/dotnet.5.0.6.js.gz"
     },
     {
-      "hash": "sha256-RKgDBe5A20rKYfepVwaU0plImkQfpSaN6r4vt9N0J2g=",
+      "hash": "sha256-4DTrdID3qjGSTqSQn0729Qn8SGtMDkNqJ+p4+1ZXZ18=",
       "url": "_framework\/ExpenseTracker.Shared.dll.gz"
     },
     {
@@ -1793,5 +1793,5 @@
       "url": "ExpenseTracker.Client.bundle.scp.css"
     }
   ],
-  "version": "MUDSDLJs"
+  "version": "+JMvv74D"
 };

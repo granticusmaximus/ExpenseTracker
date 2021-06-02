@@ -40,7 +40,7 @@ namespace ExpenseTracker.Server.Controllers
                 await _dbcontext.AddAsync(expense);
             await _dbcontext.SaveChangesAsync();
         }
-        [HttpPut("GetSingleExpense/{id}")]
+        [HttpPut("UpdateExpense/{id}")]
         public void UpdateExpense([FromBody] Expense expense)
         {
             if (ModelState.IsValid)
@@ -75,7 +75,7 @@ namespace ExpenseTracker.Server.Controllers
                 await _dbcontext.AddAsync(income);
             await _dbcontext.SaveChangesAsync();
         }
-        [HttpPut]
+        [HttpPut("UpdateIncome/{id}")]
         public void UpdateIncome([FromBody] Income income)
         {
             if (ModelState.IsValid)

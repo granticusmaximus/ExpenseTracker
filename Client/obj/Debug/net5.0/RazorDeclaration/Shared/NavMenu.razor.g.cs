@@ -104,7 +104,7 @@ using MatBlazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Shared\NavMenu.razor"
+#line 33 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

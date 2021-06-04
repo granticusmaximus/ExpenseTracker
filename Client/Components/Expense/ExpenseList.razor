@@ -51,11 +51,34 @@
 </MatDialog>
 @code {
     Expense[] expenses;
+    public Expense expense { get; set; }
+    public double Total { get; set; }
     bool dialogIsOpen = false;
 
     protected override async Task OnInitializedAsync()
     {
         expenses = await Http.GetFromJsonAsync<Expense[]>("api/Expense/GetExpenses");
+    }
+
+    void SetTotal(ChangeEventArgs e)
+    {
+        expense.Amount = (decimal)e.Value;
+        Calc();
+    }
+
+    void Calc()
+    {
+
+        Total = SetTotal.Sum();
+
+    }
+
+    private void resum(int i, ChangeEventArgs e)
+    {
+        var n = 0;
+        if (Int32.TryParse(e.Value.ToString(), out int auxn)) n = auxn;
+        AmountList[i] = n;
+        total = AmountList.Sum(x => x);
     }
 
     void OpenDialog()

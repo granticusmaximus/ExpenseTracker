@@ -54,6 +54,26 @@ namespace ExpenseTracker.Server.Controllers
             _dbcontext.Expenses.Remove(entity);
             _dbcontext.SaveChanges();
         }
+
+        [HttpGet("GetExpenseSum")]
+        public double ExpenseSum(Int32 ID)
+        {
+            List<string> sumList = new List<string>();
+            sumList = (from c in _dbcontext.Expenses where c.ID == ID select c.Amount.ToString()).ToList();
+
+            double Total = 0;
+
+            if (sumList != null)
+            {
+                for (int i = 0; i < sumList.Count; i++)
+                {
+                    Total += Convert.ToDouble(sumList[i]);
+                }
+            }
+
+            return Total;
+        }
+
         #endregion
 
         #region Income Methods
@@ -82,6 +102,26 @@ namespace ExpenseTracker.Server.Controllers
                 _dbcontext.Update(income);
             _dbcontext.SaveChanges();
         }
+
+        [HttpGet("GetIncomeSum")]
+        public double IncomeSum(Int32 ID)
+        {
+            List<string> sumList = new List<string>();
+            sumList = (from c in _dbcontext.Income where c.ID == ID select c.Amount.ToString()).ToList();
+
+            double Total = 0;
+
+            if (sumList != null)
+            {
+                for (int i = 0; i < sumList.Count; i++)
+                {
+                    Total += Convert.ToDouble(sumList[i]);
+                }
+            }
+
+            return Total;
+        }
+
         [HttpDelete("deleteincome/{id}")]
         public void DeleteIncome(int id)
         {

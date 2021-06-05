@@ -104,7 +104,7 @@ namespace ExpenseTracker.Server.Controllers
         }
 
         [HttpGet("GetIncomeSum")]
-        public double IncomeSum(Int32 ID)
+        public double IncomeSum(int ID)
         {
             List<string> sumList = new List<string>();
             sumList = (from c in _dbcontext.Income where c.ID == ID select c.Amount.ToString()).ToList();

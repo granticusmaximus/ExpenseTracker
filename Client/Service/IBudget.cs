@@ -12,8 +12,8 @@ namespace ExpenseTracker.Client.Service
         #region Income CRUD
         Task<List<Income>> LoadAllIncomeAsync();
         Task<Income> AddIncome();
-        Task<Income> UpdateIncome();
-        Task<Income> DeleteIncome();
+        Task<Income> UpdateIncome(int ID);
+        Task<Income> DeleteIncome(int ID);
         Task<Income> SumOfIncome();
         #endregion
 
@@ -21,8 +21,8 @@ namespace ExpenseTracker.Client.Service
         #region Expense CRUD
         Task<List<Expense>> LoadAllExpensesAsync();
         Task<Expense> AddExpense();
-        Task<Expense> UpdateExpense();
-        Task<Expense> DeleteExpense();
+        Task<Expense> UpdateExpense(int ID);
+        Task DeleteExpense(int ID);
         Task<Expense> SumOfExpense();
         #endregion
 

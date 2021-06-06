@@ -1,7 +1,6 @@
 ﻿using ExpenseTracker.Shared.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
@@ -17,9 +16,9 @@ namespace ExpenseTracker.Client.Service
         }
 
         #region Expense Region
-        public Task<List<Expense>> LoadAllExpensesAsync()
+        public async Task<List<Expense>> LoadAllExpensesAsync()
         {
-            throw new NotImplementedException();
+            return await _http.GetFromJsonAsync<List<Expense>>("api/Expense/GetExpenses");
         }
 
         public Task<Expense> AddExpense()
@@ -27,14 +26,14 @@ namespace ExpenseTracker.Client.Service
             throw new NotImplementedException();
         }
 
-        public Task<Expense> UpdateExpense()
+        public Task<Expense> UpdateExpense(int ID)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Expense> DeleteExpense()
+        public async Task DeleteExpense(int ID)
         {
-            throw new NotImplementedException();
+            await _http.DeleteAsync($"api/Expense/deleteexpense/{ID}");
         }
 
         public Task<Expense> SumOfExpense()
@@ -43,30 +42,32 @@ namespace ExpenseTracker.Client.Service
         }
         #endregion
 
+        #region Income Region
         public async Task<List<Income>> LoadAllIncomeAsync()
         {
-            return await _http.GetFromJsonAsync<Income>("api/SiteSample/GetTransect");
+            return await _http.GetFromJsonAsync<List<Income>>("api/Expense/GetIncomes");
         }
 
-        public Task<Income> AddIncome()
+        public async Task<Income> AddIncome(int ID)
+        {
+            await _http.PostAsJsonAsync($"/api/Handheld/Create?id={ID}");
+        }
+
+        public Task<Income> UpdateIncome(int ID)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Income> UpdateIncome()
+        public async Task DeleteIncome(int ID)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<Income> DeleteIncome()
-        {
-            throw new NotImplementedException();
+            await _http.DeleteAsync($"api/Expense/deleteincome?id={ID}");
         }
 
         public Task<Income> SumOfIncome()
         {
             throw new NotImplementedException();
         }
-        
+        #endregion
+
     }
 }

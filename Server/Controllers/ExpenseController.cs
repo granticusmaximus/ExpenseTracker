@@ -122,8 +122,8 @@ namespace ExpenseTracker.Server.Controllers
             return Total;
         }
 
-        [HttpDelete("deleteincome/{id}")]
-        public void DeleteIncome(int id)
+        [HttpDelete("deleteincome")]
+        public void DeleteIncome([FromQuery] int id = default)
         {
             var entity = _dbcontext.Income.Find(id);
             _dbcontext.Income.Remove(entity);

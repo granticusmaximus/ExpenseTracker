@@ -1,9 +1,9 @@
 ﻿using ExpenseTracker.Server.Data;
 using ExpenseTracker.Shared.Models;
+using ExpenseTracker.Shared.ViewModels;
 
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,121 +14,133 @@ namespace ExpenseTracker.Server.Controllers
     [Route("api/[controller]")]
     public class ExpenseController : Controller
     {
-        private readonly ApplicationDbContext _dbcontext;
+        private readonly ApplicationDbContext _db;
 
-        public ExpenseController(ApplicationDbContext dbcontext)
+        public ExpenseController(ApplicationDbContext db)
         {
-            this._dbcontext = dbcontext;
+            _db = db;
         }
 
-        #region Expenses Methods
-        [HttpGet("GetExpenses")]
-        public async Task<List<Expense>> GetAllExpenses()
+        [HttpGet("GetExpenseList")]
+        public IActionResult ExpenseLit()
         {
-            return await _dbcontext.Expenses.AsQueryable().ToListAsync();
-        }
+            IEnumerable<Expense> objList = _db.Expenses;
 
-        [HttpGet("GetSingleExpense/{id}")]
-        public async Task<Expense> GetSingleExpense(int id)
-        {
-            return await _dbcontext.Expenses.FindAsync(id);
-        }
-        [HttpPost("CreateExpense")]
-        public async Task CreateExpense([FromBody] Expense expense)
-        {
-            if (ModelState.IsValid)
-                await _dbcontext.AddAsync(expense);
-            await _dbcontext.SaveChangesAsync();
-        }
-        [HttpPut("UpdateExpense/{id}")]
-        public void UpdateExpense([FromBody] Expense expense)
-        {
-            if (ModelState.IsValid)
-                _dbcontext.Update(expense);
-            _dbcontext.SaveChanges();
-        }
-        [HttpDelete("deleteexpense/{id}")]
-        public void DeleteExpense(int id)
-        {
-            var entity = _dbcontext.Expenses.Find(id);
-            _dbcontext.Expenses.Remove(entity);
-            _dbcontext.SaveChanges();
-        }
-
-        [HttpGet("GetExpenseSum")]
-        public double ExpenseSum(Int32 ID)
-        {
-            List<string> sumList = new List<string>();
-            sumList = (from c in _dbcontext.Expenses where c.ID == ID select c.Amount.ToString()).ToList();
-
-            double Total = 0;
-
-            if (sumList != null)
+            foreach (var obj in objList)
             {
-                for (int i = 0; i < sumList.Count; i++)
-                {
-                    Total += Convert.ToDouble(sumList[i]);
-                }
+                obj.ExpenseType = _db.ExpenseTypes.FirstOrDefault(u => u.Id == obj.ExpenseTypeId);
             }
 
-            return Total;
+            return View(objList);
+
         }
 
-        #endregion
-
-        #region Income Methods
-        [HttpGet("GetIncomes")]
-        public async Task<List<Income>> GetAllIncomes()
+        // GET-Create
+        public IActionResult Create()
         {
-            return await _dbcontext.Income.AsQueryable().ToListAsync();
-        }
-
-        [HttpGet("GetSingleIncome/{id}")]
-        public async Task<Income> GetSingleIncome(int id)
-        {
-            return await _dbcontext.Income.FindAsync(id);
-        }
-        [HttpPost("Createincome")]
-        public async Task CreateIncome([FromBody] Income income)
-        {
-            if (ModelState.IsValid)
-                await _dbcontext.AddAsync(income);
-            await _dbcontext.SaveChangesAsync();
-        }
-        [HttpPut("UpdateIncome/{id}")]
-        public void UpdateIncome([FromBody] Income income)
-        {
-            if (ModelState.IsValid)
-                _dbcontext.Update(income);
-            _dbcontext.SaveChanges();
-        }
-
-        [HttpGet("GetIncomeSum")]
-        public double IncomeSum(int ID)
-        {
-            List<string> sumList = new List<string>();
-            sumList = (from c in _dbcontext.Income where c.ID == ID select c.Amount.ToString()).ToList();
-
-            double Total = 0;
-
-            if (sumList != null)
+            ExpenseVM expenseVM = new ExpenseVM()
             {
-                for (int i = 0; i < sumList.Count; i++)
+                Expense = new Expense(),
+                TypeDropDown = _db.ExpenseTypes.Select(i => new SelectListItem
                 {
-                    Total += Convert.ToDouble(sumList[i]);
-                }
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                })
+            };
+
+            return View(expenseVM);
+        }
+
+        // POST-Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(ExpenseVM obj)
+        {
+            if (ModelState.IsValid)
+            {
+                //obj.ExpenseTypeId = 1;
+                _db.Expenses.Add(obj.Expense);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(obj);
+
+        }
+
+
+        // GET Delete
+        public IActionResult Delete(int? id)
+        {
+
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var obj = _db.Expenses.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            return View(obj);
+
+        }
+
+        // POST Delete
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeletePost(int? id)
+        {
+            var obj = _db.Expenses.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
             }
 
-            return Total;
+            _db.Expenses.Remove(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+
         }
 
-        [HttpDelete("deleteincome")]
-        public void DeleteIncome([FromQuery] int id = default)
+        // GET Update
+        public IActionResult Update(int? id)
         {
-            var entity = _dbcontext.Income.Find(id);
-            _dbcontext.Income.Remove(entity);
-            _dbcontext.SaveChanges();
+            ExpenseVM expenseVM = new ExpenseVM()
+            {
+                Expense = new Expense(),
+                TypeDropDown = _db.ExpenseTypes.Select(i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                })
+            };
+
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            expenseVM.Expense = _db.Expenses.Find(id);
+            if (expenseVM.Expense == null)
+            {
+                return NotFound();
+            }
+            return View(expenseVM);
+
         }
-        #endregion
+
+        // POST UPDATE
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Update(ExpenseVM obj)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Expenses.Update(obj.Expense);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(obj);
+
+        }
     }
 }

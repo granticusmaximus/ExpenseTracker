@@ -1,13 +1,12 @@
 ﻿@page "/"
-@using Microsoft.AspNetCore.Components.Authorization
 @using ExpenseTracker.Client.Components.Expense
-@using ExpenseTracker.Client.Components.Income
+@using Microsoft.AspNetCore.Components.Authorization
 @inject NavigationManager NavigationManager
 
 <center>
     <h1>Hello!</h1>
 
-    Welcome to your expense tracker application.
+    Welcome to your expense tracker and borrowed item tracker application.
 </center>
 
 <center>
@@ -16,7 +15,7 @@
             <ExpenseList />
         </div>
         <div class="col-md-6">
-            <IncomeList />
+            
         </div>
     </div>
 </center>

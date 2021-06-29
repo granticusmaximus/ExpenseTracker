@@ -699,3 +699,5 @@
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\ExpenseTracker.Client.pdb
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\serviceworkers\wwwroot\service-worker.js
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\service-worker-assets.js
+\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\ExpenseTracker.Client.csproj.AssemblyReference.cache
+\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\obj\Debug\net5.0\ExpenseTracker.Client.MvcApplicationPartsAssemblyInfo.cs

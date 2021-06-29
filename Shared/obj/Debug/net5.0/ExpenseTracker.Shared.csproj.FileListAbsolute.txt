@@ -2,7 +2,6 @@
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Shared\bin\Debug\net5.0\ExpenseTracker.Shared.dll
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Shared\bin\Debug\net5.0\ref\ExpenseTracker.Shared.dll
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Shared\bin\Debug\net5.0\ExpenseTracker.Shared.pdb
-\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Shared\obj\Debug\net5.0\ExpenseTracker.Shared.csprojAssemblyReference.cache
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Shared\obj\Debug\net5.0\ExpenseTracker.Shared.GeneratedMSBuildEditorConfig.editorconfig
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Shared\obj\Debug\net5.0\ExpenseTracker.Shared.AssemblyInfoInputs.cache
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Shared\obj\Debug\net5.0\ExpenseTracker.Shared.AssemblyInfo.cs
@@ -10,3 +9,4 @@
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Shared\obj\Debug\net5.0\ExpenseTracker.Shared.dll
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Shared\obj\Debug\net5.0\ref\ExpenseTracker.Shared.dll
 \\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Shared\obj\Debug\net5.0\ExpenseTracker.Shared.pdb
+\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Shared\obj\Debug\net5.0\ExpenseTracker.Shared.csproj.AssemblyReference.cache

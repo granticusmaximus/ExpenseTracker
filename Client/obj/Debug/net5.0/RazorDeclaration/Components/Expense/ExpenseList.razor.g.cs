@@ -90,20 +90,13 @@ using ExpenseTracker.Client.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Components\Expense\ExpenseList.razor"
-using MatBlazor;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 4 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Components\Expense\ExpenseList.razor"
+#line 2 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Components\Expense\ExpenseList.razor"
 using ExpenseTracker.Shared.Models;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/expenses")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/expenselist")]
     public partial class ExpenseList : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -112,48 +105,16 @@ using ExpenseTracker.Shared.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 52 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Components\Expense\ExpenseList.razor"
+#line 63 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Components\Expense\ExpenseList.razor"
        
     Expense[] expenses;
-    public Expense expense { get; set; }
-    public double Total { get; set; }
-    bool dialogIsOpen = false;
+    public Expense expense = new Expense();
 
     protected override async Task OnInitializedAsync()
     {
-        expenses = await Http.GetFromJsonAsync<Expense[]>("api/Expense/GetExpenses");
+        expenses = await Http.GetFromJsonAsync<Expense[]>("api/Expense/GetExpenseList");
     }
 
-    void SetTotal(ChangeEventArgs e)
-    {
-        expense.Amount = (decimal)e.Value;
-        Calc();
-    }
-
-    void Calc()
-    {
-
-        Total = SetTotal.Sum();
-
-    }
-
-    private void resum(int i, ChangeEventArgs e)
-    {
-        var n = 0;
-        if (Int32.TryParse(e.Value.ToString(), out int auxn)) n = auxn;
-        AmountList[i] = n;
-        total = AmountList.Sum(x => x);
-    }
-
-    void OpenDialog()
-    {
-        dialogIsOpen = true;
-    }
-
-    void OkClose()
-    {
-        dialogIsOpen = false;
-    }
 
 #line default
 #line hidden

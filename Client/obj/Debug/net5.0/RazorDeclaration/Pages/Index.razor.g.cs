@@ -84,21 +84,14 @@ using ExpenseTracker.Client.Shared;
 #nullable disable
 #nullable restore
 #line 2 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Pages\Index.razor"
-using Microsoft.AspNetCore.Components.Authorization;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 3 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Pages\Index.razor"
 using ExpenseTracker.Client.Components.Expense;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Pages\Index.razor"
-using ExpenseTracker.Client.Components.Income;
+#line 3 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Pages\Index.razor"
+using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
@@ -112,7 +105,7 @@ using ExpenseTracker.Client.Components.Income;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 25 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Pages\Index.razor"
+#line 24 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Pages\Index.razor"
  
 
     [CascadingParameter] protected Task<AuthenticationState> AuthStat { get; set; }

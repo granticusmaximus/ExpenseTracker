@@ -89,14 +89,6 @@ using ExpenseTracker.Client.Shared;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 3 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Components\Expense\AddExpense.razor"
-using ExpenseTracker.Shared.Models;
-
-#line default
-#line hidden
-#nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/addexpense")]
     public partial class AddExpense : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -104,21 +96,6 @@ using ExpenseTracker.Shared.Models;
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 28 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Components\Expense\AddExpense.razor"
-            
-    Expense expense = new Expense();
-    protected async Task CreateExpense()
-    {
-        await Http.PostAsJsonAsync("/api/Expense/CreateExpense", expense);
-        StateHasChanged();
-    }
-
-#line default
-#line hidden
-#nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager Navigation { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }
 #pragma warning restore 1591

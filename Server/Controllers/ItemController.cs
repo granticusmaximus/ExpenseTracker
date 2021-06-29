@@ -1,17 +1,35 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-using System;
+﻿using ExpenseTracker.Server.Data;
+using ExpenseTracker.Shared.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ExpenseTracker.Server.Controllers
 {
     public class ItemController : Controller
     {
-        public IActionResult Index()
+        private readonly ApplicationDbContext _db;
+
+        public ItemController(ApplicationDbContext db)
         {
-            return View();
+            _db = db;
+        }
+
+        [HttpGet("GetItemList")]
+        public IActionResult GetItemList()
+        {
+            IEnumerable<Item> objList = _db.Items;
+            return View(objList);
+        }
+
+
+        // POST-Create
+        [HttpPost("CreateItem")]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Item obj)
+        {
+            _db.Items.Add(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

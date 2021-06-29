@@ -14,22 +14,16 @@ namespace ExpenseTracker.Server.Controllers
             _db = db;
         }
 
-
-        public IActionResult Index()
+        [HttpGet("GetExpenseType")]
+        public IActionResult GetExpenseType()
         {
             IEnumerable<ExpenseType> objList = _db.ExpenseTypes;
             return View(objList);
 
         }
 
-        // GET-Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
         // POST-Create
-        [HttpPost]
+        [HttpPost("CreateExpenseType")]
         [ValidateAntiForgeryToken]
         public IActionResult Create(ExpenseType obj)
         {

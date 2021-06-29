@@ -52,16 +52,15 @@ namespace ExpenseTracker.Server.Controllers
         }
 
         // POST-Create
-        [HttpPost]
+        [HttpPost("CreateExpense")]
         [ValidateAntiForgeryToken]
         public IActionResult Create(ExpenseVM obj)
         {
             if (ModelState.IsValid)
             {
-                //obj.ExpenseTypeId = 1;
                 _db.Expenses.Add(obj.Expense);
                 _db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("/");
             }
             return View(obj);
 
@@ -86,7 +85,7 @@ namespace ExpenseTracker.Server.Controllers
         }
 
         // POST Delete
-        [HttpPost]
+        [HttpPost("DeleteExpense")]
         [ValidateAntiForgeryToken]
         public IActionResult DeletePost(int? id)
         {
@@ -129,7 +128,7 @@ namespace ExpenseTracker.Server.Controllers
         }
 
         // POST UPDATE
-        [HttpPost]
+        [HttpPost("UpdateExpense")]
         [ValidateAntiForgeryToken]
         public IActionResult Update(ExpenseVM obj)
         {

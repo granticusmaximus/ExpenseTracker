@@ -1,93 +1,72 @@
-﻿@page "/expenses"
-@inject HttpClient Http
-@using MatBlazor
+﻿@page "/expenselist"
 @using ExpenseTracker.Shared.Models
+@inject HttpClient Http
 
-<center>
-    <h1>Expenses</h1>
-    <p>
-        <button class="btn btn-outline-success" @onclick="_ => OpenDialog()"><span class="oi oi-clipboard" aria-hidden="true">Add New Expense</span></button>
-    </p>
-    @if (expenses == null)
+<h3>Expense List</h3>
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Expenses List</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a href="/addexpense" class="btn btn-primary">Create new Expense</a>
+        </div>
+    </div>
+    <br />
+
+    @if (expenses.Count() > 0)
     {
-        <p><em>Loading...</em></p>
-    }
-    else
-    {
-        <table class='table'>
+        <table class="table table-bordered table-striped" style="width:100%">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Amount</th>
+                    <th>
+                        Expense
+                    </th>
+                    <th>
+                        Amount
+                    </th>
+                    <th>
+                        Expense Type
+                    </th>
+                    <th>
+                        Changes
+                    </th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var expense in expenses)
                 {
                     <tr>
-                        <td>@expense.ID</td>
-                        <td>@expense.Title</td>
-                        <td>@expense.Amount</td>
-                        <td>
-                            <a href='/editexpense/@expense.ID'>Edit</a>  |
-                            <a href='/delete/@expense.ID'>Delete</a>
+                        <td width="25%">@expense.ExpenseName</td>
+                        <td width="25%">@expense.Amount</td>
+                        <td width="25%">@expense.ExpenseType.Name</td>
+                        <td width="25%">
+                            <div class="w-100 btn-group" role="group">
+                                <a href="/updateexpense" asp-route-Id="@expense.Id" class="btn btn-primary mx-1">Update</a>
+                                <a href="/deleteexpense" asp-route-Id="@expense.Id" class="btn btn-danger mx-1">Delete</a>
+                            </div>
                         </td>
                     </tr>
-
                 }
             </tbody>
         </table>
     }
-</center>
-<MatDialog @bind-IsOpen="@dialogIsOpen">
-    <MatDialogTitle>Add New Income</MatDialogTitle>
-    <MatDialogContent>
-        <AddExpense />
-    </MatDialogContent>
-    <MatDialogActions>
-        <MatButton OnClick="OkClose">Close</MatButton>
-    </MatDialogActions>
-</MatDialog>
+    else
+    {
+        <p>No items created yet</p>
+    }
+
+</div>
+
+
 @code {
     Expense[] expenses;
-    public Expense expense { get; set; }
-    public double Total { get; set; }
-    bool dialogIsOpen = false;
+    public Expense expense = new Expense();
 
     protected override async Task OnInitializedAsync()
     {
-        expenses = await Http.GetFromJsonAsync<Expense[]>("api/Expense/GetExpenses");
+        expenses = await Http.GetFromJsonAsync<Expense[]>("api/Expense/GetExpenseList");
     }
 
-    void SetTotal(ChangeEventArgs e)
-    {
-        expense.Amount = (decimal)e.Value;
-        Calc();
-    }
-
-    void Calc()
-    {
-
-        Total = SetTotal.Sum();
-
-    }
-
-    private void resum(int i, ChangeEventArgs e)
-    {
-        var n = 0;
-        if (Int32.TryParse(e.Value.ToString(), out int auxn)) n = auxn;
-        AmountList[i] = n;
-        total = AmountList.Sum(x => x);
-    }
-
-    void OpenDialog()
-    {
-        dialogIsOpen = true;
-    }
-
-    void OkClose()
-    {
-        dialogIsOpen = false;
-    }
-}  
+}

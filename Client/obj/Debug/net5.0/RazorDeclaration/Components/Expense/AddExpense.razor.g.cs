@@ -89,6 +89,21 @@ using ExpenseTracker.Client.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\_Imports.razor"
+using ExpenseTracker.Shared.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\_Imports.razor"
+using ExpenseTracker.Shared.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/addexpense")]
     public partial class AddExpense : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yBTOyRslcUhOiZf+EP6zzlNV/xrOnk+10z/vrv9rKJfy8jbWa8DG4rmqw5cVefjubLC+mo0QZbGkTBwYBRyNQw==",
+  "dgSpecHash": "Wc5/lw63FP5MwP9Tbxf0Bx8AwbpJOnC8RDoFike4oTuRyB+pSr1Wp2TD6HwdI+DcWEZLPyZWGsKZbzFzzV/Ttw==",
   "success": true,
   "projectFilePath": "\\\\Mac\\Home\\Desktop\\Dev\\Blazor\\ExpenseTracker\\ExpenseTracker\\Server\\ExpenseTracker.Server.csproj",
   "expectedPackageFiles": [

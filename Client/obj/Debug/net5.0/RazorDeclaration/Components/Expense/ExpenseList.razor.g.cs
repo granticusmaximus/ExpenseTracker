@@ -90,6 +90,13 @@ using ExpenseTracker.Client.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 13 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\_Imports.razor"
+using ExpenseTracker.Shared.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Components\Expense\ExpenseList.razor"
 using ExpenseTracker.Shared.Models;
 

@@ -111,6 +111,26 @@ using ExpenseTracker.Shared.ViewModels;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 54 "\\Mac\Home\Desktop\Dev\Blazor\ExpenseTracker\ExpenseTracker\Client\Components\Expense\AddExpense.razor"
+       
+    private ExpenseVM expenseModel = new();
+
+    protected async Task CreateExpense()
+    {
+        await http.PostAsJsonAsync(/*add API endpoint here*/);
+        navigation.NavigateTo("/expenselist");
+    }
+    void cancel()
+    {
+        navigation.NavigateTo("/expenselist");
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navigation { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient http { get; set; }
     }
 }
 #pragma warning restore 1591
